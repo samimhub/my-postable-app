@@ -2,24 +2,26 @@
 
 function InfluencersSolution() {
   return (
-    <section>
-    <div>
+    <section className="flex flex-row">
+    <div className="flex flex-col justify-start ">
+      <p >Postable is perfect for individuals who want to elevate their social media presence without the hassle. 
+          Whether you're sharing thoughts, opinions, or everyday moments, Postable makes it easy to create and share beautiful, impactful posts from your tweets.</p>
       <div>
-      <h1>One Solution for All!</h1>
-      <h1>Postable helps everyone to share their thoughts across multiple platforms</h1>
-      <div>
-          button
+      <ul className="space-y-2">
+            {["Quick Post Creation", "Boosted Follower Engagement", "Consistent Multi-Platform Presence", "Content Diversification"].map((feature, index) => (
+              <li key={index} className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-green-500" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <path d="M5 13l4 4L19 7"></path>
+                </svg>
+                {feature}
+              </li>
+            ))}
+          </ul>
       </div>
-      <div>Postable is perfect for individuals who want to elevate their social media presence without the hassle. 
-          Whether you're sharing thoughts, opinions, or everyday moments, Postable makes it easy to create and share beautiful, impactful posts from your tweets.</div>
-      </div>
-      <div>
-          <li></li>
       </div>
       <div>
           card
       </div>
-    </div>
   </section>
   )
 }

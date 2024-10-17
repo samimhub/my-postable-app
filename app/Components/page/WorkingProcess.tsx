@@ -5,22 +5,20 @@ import Image from "next/image"
 
 function WorkingProcess() {
   return (
-    <section>
-      <div>
-      <h1>How to work?</h1>
-      <div className="grid gap-6 md:grid-cols-3">
+    <section className="py-10">
+      <div className="max-w-5xl m-auto">
+      <h1 className="text-5xl font-bold py-4">How it work?</h1>
+      <div className="grid gap-6 md:grid-cols-3 ">
         {processCard.map((card) => (
-          <div key={card.id} className="w-full max-w-sm">
-            <div>
-              <Image src={card.img} alt="card image" width={120} height={120}/>
+          <div key={card.id} className="rounded-xl bg-slate-200">
+            <div className=" w-full p-1">
+              <Image src={card.img} alt="card image" width={250} height={120}/>
             </div>
-            <div className="space-y-4">
-              <div className="aspect-video relative bg-muted rounded-lg overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-sm font-medium text-muted-foreground">STEP {card.id}</div>
-                </div>
-              </div>
+            <div className="space-y-6 p-8">
+              <div>
+              <h1 className="text-sm text-black font-medium text-muted-foreground">STEP {card.id}</h1>
               <h3 className="text-lg font-semibold">{card.title}</h3>
+              </div>
               <p className="text-sm text-muted-foreground">{card.description}</p>
             </div>
           </div>

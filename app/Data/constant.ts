@@ -26,3 +26,25 @@ export const processCard : ProcessCard[]=[
         description:'Simply export and publish your meticulously crafted posts, tailored to meet each social media’s standards and format.'
     }
 ]
+export const faqItems = [
+    {
+      question: "Is Postable free to use?",
+      answer: "Yes, Postable offers a free tier with basic features. Premium features may require a subscription."
+    },
+    {
+      question: "What social media platforms does this tool support?",
+      answer: "Postable supports major platforms including Instagram, Facebook, Twitter, and LinkedIn."
+    },
+    {
+      question: "Can I customize the created images?",
+      answer: "Postable provides a range of customization options for your images."
+    },
+    {
+      question: "Do I need design skills to use this platform?",
+      answer: "No, Postable is designed to be user-friendly for all skill levels."
+    },
+    {
+      question: "Do I need to know the format or size of each social media?",
+      answer: "Not at all. Postable automatically adjusts your content to fit the requirements of each platform."
+    }
+  ]

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
+import {Clipboard, ClipboardList, MessageCircle} from'lucide-react'
 
 
 export default function SearchBar() {
@@ -17,41 +18,40 @@ export default function SearchBar() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-
   return (
-    <div className="min-h-[200vh]">
-      <div className="fixed top-0 left-0 right-0 z-50 p-4">
-        <div className={`mx-auto transition-all duration-500 ease-in-out ${
-          isExpanded ? 'bg-gray-900 rounded-full shadow-lg max-w-3xl' : 'max-w-[200px]'
+    <div className="my-">
+      <div className="fixed top-0 left-0 right-0 py-6 z-50">
+        <div className={`flex font-bold mx-auto transition-all ${
+          isExpanded ? 'bg-gray-900 p-2 gap-8 rounded-3xl shadow-lg max-w-2xl' : ' text-white items-center text-2xl max-w-[200px]'
         }`}>
-          <div className={`flex items-center transition-all duration-500 ease-in-out ${
-            isExpanded ? 'px-6 py-3' : 'justify-center py-2'
-          }`}>
-            <div className={`font-bold transition-all duration-500 ease-in-out ${
-              isExpanded ? 'text-white text-xl mr-4' : 'text-gray-900 text-2xl'
+            <div className={`flex justify-center items-center gap-8 font-bold transition-all duration-400 ${
+              isExpanded ? 'text-white text-2xl' : 'bg-gray-900 rounded-3xl px-10 py-5 text-white items-center text-2xl'
             }`}>
+              <div className={`${isExpanded ? 'hidden px-5':'px-5'}`}>
+              <MessageCircle/>
+              </div>
               Postable
             </div>
-            <div className={`flex-grow transition-all duration-500 ease-in-out ${
+            <div className={`relative flex-grow transition-all ${
               isExpanded ? 'opacity-100' : 'opacity-0'
             }`}>
-              <div className="relative">
+              <div className="flex justify-between relative max-w-3xl items-center">
                 <Input 
                   type="text" 
                   placeholder="Paste tweet link here..."
-                  className="w-full bg-gray-800 text-white border-none focus:ring-0"
+                  className=" bg-gray-700 hover:bg-gray-600 p-6 text-lg rounded-2xl text-white border-none focus:ring-0"
                 />
                 <Button 
                   size="sm"
-                  className="absolute right-1 top-1/2 transform -translate-y-1/2 bg-gray-700 hover:bg-gray-600 text-white"
-                >
-                  Paste
+                  className="absolute right-2 gap-1 bg-gray-500 hover:bg-gray-400 font-semibold text-lg text-white"
+                ><span>Paste</span>
+                  <ClipboardList size={12}/>
                 </Button>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+         </div>
+       </div>
+    // </div>
   )
 }
