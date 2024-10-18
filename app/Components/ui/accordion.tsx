@@ -1,23 +1,23 @@
-import React, { useState, ReactNode, ReactElement } from "react";
-import { cn } from "@/app/lib/utils";
+import React, { useState, ReactNode } from "react";
+import { cn } from "@/app/lib/utils"; // Ensure this is the correct path for your utility function
 
 interface AccordionProps {
-  children: ReactElement<AccordionItemProps>[]; 
-  type?: "single" | "multiple"; 
-  collapsible?: boolean;
+  children: ReactNode;
+  type?: "single" | "multiple";
+  collapsible?: boolean; // Declare collapsible as an optional prop
   className?: string;
 }
 
 interface AccordionItemProps {
-  value: string; 
-  collapsible?: boolean;
-  children: ReactNode; 
+  value: string;
+  collapsible?: boolean; // Declare collapsible here too
+  children: ReactNode;
 }
 
 interface AccordionTriggerProps {
   children: ReactNode;
-  isOpen: boolean;
-  onClick?: () => void;
+  isOpen: boolean; // Required prop
+  onClick: () => void; // Required prop
 }
 
 interface AccordionContentProps {
@@ -26,19 +26,24 @@ interface AccordionContentProps {
 
 export function Accordion({
   children,
+  type = "multiple",
   collapsible = false,
   className = "",
 }: AccordionProps) {
   return (
     <div className={cn("accordion", className)}>
-      {React.Children.map(children, (child) => 
-        React.cloneElement(child as React.ReactElement<AccordionItemProps>, { collapsible }) // Explicitly passing collapsible
-      )}
+      {React.Children.map(children, (child) => {
+        if (React.isValidElement(child)) {
+          return React.cloneElement(child, { collapsible }); // Pass collapsible prop
+        }
+        return null; // Return null for non-valid elements
+      })}
     </div>
   );
 }
 
 export function AccordionItem({
+  value,
   collapsible = false,
   children,
 }: AccordionItemProps) {
@@ -46,23 +51,22 @@ export function AccordionItem({
 
   const toggleItem = () => {
     if (collapsible || !isOpen) {
-      setIsOpen(!isOpen);
+      setIsOpen((prev) => !prev);
     }
   };
 
   return (
     <div className="border-b border-gray-200">
       {React.Children.map(children, (child) => {
-        if (React.isValidElement(child) && child.type === AccordionTrigger) {
-          return React.cloneElement(child as React.ReactElement<AccordionTriggerProps>, {
-            onClick: toggleItem,
-            isOpen,
-          });
+        if (React.isValidElement(child)) {
+          if (child.type === AccordionTrigger) {
+            return React.cloneElement(child, { onClick: toggleItem, isOpen }); // Pass isOpen and onClick
+          }
+          if (child.type === AccordionContent) {
+            return isOpen ? child : null; // Render content only if isOpen
+          }
         }
-        if (React.isValidElement(child) && child.type === AccordionContent) {
-          return isOpen ? child : null;
-        }
-        return child; 
+        return child; // Return any other children
       })}
     </div>
   );
@@ -79,7 +83,7 @@ export function AccordionTrigger({
       onClick={onClick}
     >
       <span>{children}</span>
-      <span>{isOpen ? "-" : "+"}</span> 
+      <span>{isOpen ? "-" : "+"}</span> {/* Toggle icon based on isOpen */}
     </button>
   );
 }
