@@ -2,16 +2,16 @@ import React, { useState, ReactNode, ReactElement } from "react";
 import { cn } from "@/app/lib/utils";
 
 interface AccordionProps {
-  children: ReactElement<AccordionItemProps>[]; // Expecting an array of AccordionItems
-  type?: "single" | "multiple"; // Not used, can be removed if not needed
+  children: ReactElement<AccordionItemProps>[]; 
+  type?: "single" | "multiple"; 
   collapsible?: boolean;
   className?: string;
 }
 
 interface AccordionItemProps {
-  value: string; // This should be used, can remove if not needed
+  value: string; 
   collapsible?: boolean;
-  children: ReactNode; // Can include any ReactNode, but we will check types inside AccordionItem
+  children: ReactNode; 
 }
 
 interface AccordionTriggerProps {
@@ -39,7 +39,6 @@ export function Accordion({
 }
 
 export function AccordionItem({
-  value, // This can be used to identify or log the item if needed
   collapsible = false,
   children,
 }: AccordionItemProps) {
@@ -61,9 +60,9 @@ export function AccordionItem({
           });
         }
         if (React.isValidElement(child) && child.type === AccordionContent) {
-          return isOpen ? child : null; // Only render if isOpen
+          return isOpen ? child : null;
         }
-        return child; // Return any other children
+        return child; 
       })}
     </div>
   );
@@ -80,7 +79,7 @@ export function AccordionTrigger({
       onClick={onClick}
     >
       <span>{children}</span>
-      <span>{isOpen ? "-" : "+"}</span> {/* Show "-" if open, "+" if closed */}
+      <span>{isOpen ? "-" : "+"}</span> 
     </button>
   );
 }
