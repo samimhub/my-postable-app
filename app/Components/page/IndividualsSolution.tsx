@@ -1,9 +1,10 @@
+
 import React from 'react'
 
 function IndividualsSolution() {
   return (
-    <section className="flex flex-row">
-    <div className="flex flex-col justify-start ">
+    <section className="max-w-sm mx-auto space-y-4">
+    <div className="flex flex-col">
       <p >Postable is perfect for individuals who want to elevate their social media presence without the hassle. 
           Whether you're sharing thoughts, opinions, or everyday moments, Postable makes it easy to create and share beautiful, impactful posts from your tweets.</p>
       <div>
@@ -18,9 +19,6 @@ function IndividualsSolution() {
             ))}
           </ul>
       </div>
-      </div>
-      <div>
-          card
       </div>
   </section>
   )

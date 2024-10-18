@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Button } from "../ui/button"
 import Facebook from "./Facebook";
-import Linkedin from "./Linkedin";
+import LinkedIn from "./LinkedIn";
 import Instagram from "./Instagram";
 import { FacebookIcon, InstagramIcon } from "lucide-react";
 
@@ -25,7 +25,7 @@ export default function ShareVoice() {
               perfect for Instagram, Facebook, and more.
             </p>
             
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center gap-4">
         <Button 
           className={`px-4 gap-1 py-1 text-md font-semibold cursor-pointer rounded-xl ${activeComponent === 1 ? 'bg-black/30 hover:scale-105 active:scale-95"' : 'hover:scale-105 hover:duration-300'}`}
           onClick={() => handleToggle(1)}
@@ -47,23 +47,35 @@ export default function ShareVoice() {
         <InstagramIcon size={12}/>
           Linkedin Post
         </Button>
+        <Button 
+          className={`px-4 gap-1 py-2 text-lg font-semibold cursor-pointer rounded-xl ${activeComponent === 4 ? 'bg-black/30 hover:scale-105 active:scale-95' : 'hover:scale-105 hover:duration-300'}`}
+          onClick={() => handleToggle(4)}
+        >
+        <InstagramIcon size={12}/>
+          Linkedin Post
+        </Button>
         <Button>+ more</Button>
       </div>
       <div className="relative w-full flex justify-center mt-8">
         {activeComponent === 1 && 
-        <div className="relative -bottom-14 md:w-3/4 md:p-4 rounded-2xl">
+        <div className="relative -bottom-16 md:w-3/4 md:p-4 rounded-2xl">
             <Facebook/>
         </div>
         
         }
         {activeComponent === 2 &&
-        <div className="relative -bottom-14 md:w-3/4  md:p-4 rounded-2xl">
+        <div className="relative -bottom-16 md:w-3/4  md:p-4 rounded-2xl">
           <Instagram/>
         </div> 
         }
         {activeComponent === 3 && 
-        <div className="relative -bottom-14 md:w-3/4 md:p-4 rounded-2xl">
-          <Linkedin/>
+        <div className="relative -bottom-16 md:w-3/4 md:p-4 rounded-2xl">
+          <LinkedIn/>
+        </div>
+        }
+        {activeComponent === 4 && 
+        <div className="relative -bottom-16 md:w-3/4 md:p-4 rounded-2xl">
+          <Instagram/>
         </div>
         }
       </div>

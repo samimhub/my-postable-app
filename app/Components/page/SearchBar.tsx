@@ -19,15 +19,14 @@ export default function SearchBar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   return (
-    <div className="my-">
       <div className="fixed top-0 left-0 right-0 py-6 z-50">
         <div className={`flex font-bold mx-auto transition-all ${
           isExpanded ? 'bg-gray-900 p-2 gap-8 rounded-3xl shadow-lg max-w-2xl' : ' text-white items-center text-2xl max-w-[200px]'
         }`}>
-            <div className={`flex justify-center items-center gap-8 font-bold transition-all duration-400 ${
-              isExpanded ? 'text-white text-2xl' : 'bg-gray-900 rounded-3xl px-10 py-5 text-white items-center text-2xl'
+            <div className={`flex justify-center items-center gap-8 font-bold transition-all ${
+              isExpanded ? 'text-white text-2xl' : 'bg-gray-900 rounded-3xl px-10 py-6 text-white items-center text-2xl'
             }`}>
-              <div className={`${isExpanded ? 'hidden px-5':'px-5'}`}>
+              <div className={` ${isExpanded ? 'hidden mx-auto':''}`}>
               <MessageCircle/>
               </div>
               Postable
@@ -39,7 +38,7 @@ export default function SearchBar() {
                 <Input 
                   type="text" 
                   placeholder="Paste tweet link here..."
-                  className=" bg-gray-700 hover:bg-gray-600 p-6 text-lg rounded-2xl text-white border-none focus:ring-0"
+                  className=" bg-gray-700 hover:bg-gray-600 p-8 text-lg rounded-2xl text-white border-none focus:ring-0"
                 />
                 <Button 
                   size="sm"
@@ -51,7 +50,5 @@ export default function SearchBar() {
             </div>
           </div>
          </div>
-       </div>
-    // </div>
   )
 }

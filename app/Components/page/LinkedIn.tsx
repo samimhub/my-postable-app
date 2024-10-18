@@ -1,19 +1,16 @@
-"use client"
 
-import { FacebookIcon } from "lucide-react"
-import {motion} from 'framer-motion'
+import { Linkedin } from "lucide-react"
 
-
-export default function Facebook() {
+export default function LinkedIn() {
   return (
     <div className="w-full max-w-xl mx-auto p-1 relative">
       {/* First card */}
-      <motion.div className="overflow-hidden rounded-3xl bg-gradient-to-br from-pink-400 via-blue-500 to-teal-400 shadow-lg absolute inset-0 rotate-3 opacity-75">
-        <div className="bg-white/10 backdrop-blur-sm rounded-t-2xl px-6 py-3 flex items-center space-x-2">
-          <FacebookIcon className="w-4 h-4 text-white" />
+      <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-pink-400 via-blue-500 to-teal-400 shadow-lg absolute inset-0 rotate-3 opacity-75">
+        <div className="bg-white/10 backdrop-blur-sm border-1 border-b rounded-t-2xl px-6 py-3 flex items-center space-x-2">
+          <Linkedin className="w-4 h-4 text-white" />
           <span className="text-xs font-medium text-white">LinkedIn post</span>
         </div>
-        <div className="bg-gradient-to-br from-pink-400 via-blue-500 to-teal-400 p-8 rounded-b-2xl flex items-center justify-center min-h-[300px]">
+        <div className="bg-gradient-to-br from-pink-400 via-blue-500 to-teal-400 p-8 rounded-b-2xl flex items-center justify-center min-h-[250px]">
           <div className="bg-white rounded-3xl p-4 shadow-md w-full max-w-lg">
             <div className="flex items-center space-x-3 mb-2">
               <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
@@ -34,15 +31,15 @@ export default function Facebook() {
             <p className="text-xs text-gray-500">9:12 PM · Jul 22, 2024</p>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Second card */}
       <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-pink-400 via-blue-500 to-teal-400 shadow-lg relative z-10">
-        <div className="bg-white/10 backdrop-blur-sm border-1 border-b rounded-t-2xl px-6 py-3 flex items-center space-x-2">
-          <FacebookIcon className="w-4 h-4 text-white" />
+        <div className="bg-white/10 backdrop-blur-sm rounded-t-2xl px-6 py-3 flex items-center space-x-2">
+          <Linkedin className="w-4 h-4 text-white" />
           <span className="text-xs font-medium text-white">LinkedIn post</span>
         </div>
-        <div className="bg-gradient-to-br from-pink-400 via-blue-500 to-teal-400 p-8 rounded-b-2xl flex items-center justify-center min-h-[300px]">
+        <div className="bg-gradient-to-br from-pink-400 via-blue-500 to-teal-400 p-8 rounded-b-2xl flex items-center justify-center min-h-[250px]">
           <div className="bg-white rounded-3xl p-4 shadow-md w-full max-w-lg">
             <div className="flex items-center space-x-3 mb-2">
               <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">

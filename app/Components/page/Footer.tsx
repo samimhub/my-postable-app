@@ -1,87 +1,96 @@
+
+
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-purple-500 to-pink-500 py-10 text-white">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Left Section */}
-        <div>
-          <p className="text-lg font-semibold">We help you to create postable content!</p>
-          <p className="text-sm text-gray-200">
+    <footer className="relative z-0 bg-gradient-to-r from-purple-500 to-pink-500 py-8 text-white">
+      <div>
+        <h1 className="max-w-[77rem] mx-auto text-4xl font-bold py-10">Postable</h1>
+      </div>
+      <div className="max-w-7xl mx-auto flex justify-evenly flex-cols-1 md:flex-cols-3 gap-14">
+        <div className=" ">
+          <p className="text-3xl font-bold">We help you to create postable content!</p>
+          <p className="text-xl max-w-md text-gray-200">
             Postable is a free, unlimited tool designed to empower individuals, influencers, and businesses to amplify their voice and effortlessly create engaging content that goes beyond the ordinary.
           </p>
         </div>
 
         {/* Middle Section (Products) */}
-        <div>
+        <div className="">
           <h3 className="text-xl font-bold mb-4">Products</h3>
           <ul className="space-y-2">
-            <li>Tweet Converter</li>
-            <li>Post Scheduler <span className="text-sm text-gray-400">(COMING SOON)</span></li>
-            <li>Screenshot Designer <span className="text-sm text-gray-400">(COMING SOON)</span></li>
+            <li className="text-xl text-gray-200">Tweet Converter</li>
+            <li className="text-xl text-gray-200">Post Scheduler <span className="text-sm bg-pink-400 rounded-md font-semibold text-gray-300">(COMING SOON)</span></li>
+            <li className="text-xl text-gray-200">Screenshot Designer <span className="text-sm bg-pink-400 rounded-md font-semibold text-gray-300">(COMING SOON)</span></li>
           </ul>
         </div>
 
         {/* Right Section (Company) */}
-        <div>
+        <div className="">
           <h3 className="text-xl font-bold mb-4">Company</h3>
           <ul className="space-y-2">
-            <li>Privacy Policy</li>
-            <li>Terms And Conditions</li>
-            <li>Refund Policy</li>
+            <li className="text-xl text-gray-200">Privacy Policy</li>
+            <li className="text-xl text-gray-200">Terms And Conditions</li>
+            <li className="text-xl text-gray-200">Refund Policy</li>
           </ul>
         </div>
       </div>
-
       {/* Social Links */}
-      <div className="mt-10 border-t border-gray-300 pt-6 text-center">
+      <div className="mt-10 max-w-7xl mx-auto border-t border-gray-500 pt-6 text-center">
         <div className="flex flex-row justify-center space-x-4">
           {/* Replace with actual icons */}
-          <a href="#" className="flex  items-center space-x-2">
-            <div className="bg-gray-800 rounded-full p-2">
-              <span className="sr-only">Twitter</span>
-              {/* Use FontAwesome or any icon library */}
-              <i className="fab fa-twitter"></i>
+          <a href="#" className="flex  items-center space-x-3 px-5 p-2 rounded-xl bg-black/20 hover:bg-black/30">
+            <div>
+              <span >
+              <svg className="size-7 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clip-rule="evenodd" d="M6.67572 22.7344C10.2164 23.0885 13.7836 23.0885 17.3243 22.7344C20.1854 22.4483 22.4483 20.1854 22.7344 17.3243C23.0885 13.7836 23.0885 10.2164 22.7344 6.67572C22.4483 3.81463 20.1854 1.55166 17.3243 1.26555C13.7836 0.911483 10.2164 0.911483 6.67571 1.26555C3.81463 1.55166 1.55166 3.81463 1.26555 6.67571C0.911483 10.2164 0.911483 13.7836 1.26555 17.3243C1.55166 20.1854 3.81463 22.4483 6.67572 22.7344ZM17.6108 6L13.1428 11.0818L18 18H14.4264L11.1544 13.3403L7.0584 18H6L10.6852 12.6716L6 6H9.5736L12.6712 10.4115L16.5524 6H17.6108ZM9.0664 6.78095H7.4404L14.9252 17.2574H16.5516L9.0664 6.78095Z" fill="currentColor"></path></svg>
+              </span>
             </div>
             <div className="flex flex-col">
               <span>Follow us on</span>
-              <span>X / Twitter</span>
+              <span className='font-semibold text-lg'>X / Twitter</span>
             </div>
           </a>
-          <a href="#" className="flex items-center space-x-2">
-            <div className="bg-gray-800 rounded-full p-2">
-              <span className="sr-only">Instagram</span>
-              <i className="fab fa-instagram"></i>
+          <a href="#" className="flex items-center space-x-4 p-2 px-5 rounded-xl bg-black/20 hover:bg-black/30">
+            <div className="">
+              <span className="">
+              <svg className="size-7 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clip-rule="evenodd" d="M17.3253 22.7344C13.7846 23.0885 10.2174 23.0885 6.67669 22.7344C3.81561 22.4483 1.55264 20.1854 1.26653 17.3243C0.912459 13.7836 0.912459 10.2164 1.26653 6.67571C1.55264 3.81463 3.81561 1.55166 6.67669 1.26555C10.2174 0.911483 13.7846 0.911483 17.3253 1.26555C20.1863 1.55166 22.4493 3.81463 22.7354 6.67572C23.0895 10.2164 23.0895 13.7836 22.7354 17.3243C22.4493 20.1854 20.1863 22.4483 17.3253 22.7344ZM12 18C10.8133 18 9.65327 17.6481 8.66658 16.9888C7.67988 16.3295 6.91085 15.3925 6.45673 14.2961C6.0026 13.1997 5.88378 11.9933 6.11529 10.8295C6.3468 9.66557 6.91825 8.59648 7.75736 7.75736C8.59648 6.91825 9.66557 6.3468 10.8295 6.11529C11.9933 5.88378 13.1997 6.0026 14.2961 6.45673C15.3925 6.91085 16.3295 7.67988 16.9888 8.66658C17.6481 9.65327 18 10.8133 18 12C17.9982 13.5907 17.3655 15.1158 16.2407 16.2407C15.1158 17.3655 13.5907 17.9982 12 18ZM12 16C11.2089 16 10.4355 15.7654 9.77772 15.3259C9.11992 14.8864 8.60723 14.2616 8.30448 13.5307C8.00173 12.7998 7.92252 11.9956 8.07686 11.2196C8.2312 10.4437 8.61216 9.73098 9.17157 9.17157C9.73098 8.61216 10.4437 8.2312 11.2196 8.07686C11.9956 7.92252 12.7998 8.00173 13.5307 8.30448C14.2616 8.60723 14.8864 9.11992 15.3259 9.77772C15.7654 10.4355 16 11.2089 16 12C15.9988 13.0605 15.577 14.0772 14.8271 14.8271C14.0772 15.577 13.0605 15.9988 12 16ZM18.5 7C18.2033 7 17.9133 6.91203 17.6666 6.7472C17.42 6.58238 17.2277 6.34811 17.1142 6.07403C17.0007 5.79994 16.9709 5.49834 17.0288 5.20736C17.0867 4.91639 17.2296 4.64912 17.4393 4.43934C17.6491 4.22956 17.9164 4.0867 18.2074 4.02882C18.4983 3.97094 18.7999 4.00065 19.074 4.11418C19.3481 4.22771 19.5824 4.41997 19.7472 4.66665C19.912 4.91332 20 5.20333 20 5.5C20 5.89783 19.842 6.27936 19.5607 6.56066C19.2794 6.84197 18.8978 7 18.5 7Z" fill="currentColor"></path></svg>
+              </span>
             </div>
             <div className="flex flex-col">
               <span>Follow us on</span>
-              <span>X / Twitter</span>
+              <span className='font-semibold text-lg'>Instagram</span>
             </div>
           </a>
-          <a href="#" className="flex items-center space-x-2">
-            <div className="bg-gray-800 rounded-full p-2">
-              <span className="sr-only">Discord</span>
-              <i className="fab fa-discord"></i>
+          <a href="#" className="flex items-center space-x-4 p-2 px-5 rounded-xl bg-black/20 hover:bg-black/30">
+            <div className="rounded-full p-2">
+              <span className="">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" className="size-7 text-white"><path fillRule="evenodd" clip-rule="evenodd" d="M0.831716 4.16922C-0.000610352 5.80276 -0.000610352 7.94117 -0.000610352 12.218V15.7817C-0.000610352 20.0585 -0.000610352 22.1969 0.831716 23.8305C1.56385 25.2674 2.73208 26.4356 4.16898 27.1677C5.80251 28.0001 7.94093 28.0001 12.2178 28.0001H15.7814C20.0583 28.0001 22.1967 28.0001 23.8302 27.1677C25.2671 26.4356 26.4354 25.2674 27.1675 23.8305C27.9998 22.1969 27.9998 20.0585 27.9998 15.7817V12.218C27.9998 7.94117 27.9998 5.80276 27.1675 4.16922C26.4354 2.73233 25.2671 1.5641 23.8302 0.83196C22.1967 -0.000366211 20.0583 -0.000366211 15.7814 -0.000366211H12.2178C7.94093 -0.000366211 5.80251 -0.000366211 4.16898 0.83196C2.73208 1.5641 1.56385 2.73233 0.831716 4.16922ZM18.4098 6.51199L18.7572 7.18416H19.6003C20.109 7.18416 20.5224 7.61212 20.5224 8.13871V8.95961C20.5224 9.4862 20.109 9.91416 19.6003 9.91416H9.03532C8.52659 9.91416 8.11315 9.4862 8.11315 8.95961V8.13871C8.11315 7.61212 8.52659 7.18416 9.03532 7.18416H9.87756L10.2249 6.51199C10.3479 6.04982 10.769 5.72687 11.2493 5.72687H17.3854C17.8657 5.72687 18.2869 6.04984 18.4098 6.51199ZM9.70657 20.2258C9.78957 21.2114 10.5719 21.9544 11.5279 21.9544H17.1815C18.1367 21.9544 18.9198 21.2114 19.0028 20.2258L19.4159 12.4361C19.4459 12.0792 19.1741 11.7723 18.828 11.7723H9.88087C9.53475 11.7723 9.26293 12.0792 9.2929 12.4361L9.70657 20.2258Z" fill="currentColor"></path></svg>
+              </span>
             </div>
             <div className="flex flex-col">
               <span>Follow us on</span>
-              <span>X / Twitter</span>
+              <span className='font-semibold text-lg'>Discord</span>
             </div>
           </a>
-          <a href="#" className="flex items-center space-x-2">
-            <div className="bg-gray-800 rounded-full p-2">
-              <span className="sr-only">Buy Coffee</span>
-              <i className="fas fa-coffee"></i>
+          <a href="#" className="flex items-center space-x-4 p-2 px-5 rounded-xl bg-black/20 hover:bg-black/30">
+            <div className="rounded-full p-2">
+              <span className="">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" className="size-7 text-white"><path fillRule="evenodd" clip-rule="evenodd" d="M1.63734 4.69658C0.87439 6.19396 0.87439 8.15414 0.87439 12.0745V15.3412C0.87439 19.2615 0.87439 21.2217 1.63734 22.7191C2.30846 24.0362 3.37932 25.1071 4.69646 25.7782C6.19384 26.5412 8.15402 26.5412 12.0744 26.5412H15.3411C19.2614 26.5412 21.2216 26.5412 22.719 25.7782C24.0361 25.1071 25.107 24.0362 25.7781 22.7191C26.5411 21.2217 26.5411 19.2615 26.5411 15.3412V12.0745C26.5411 8.15414 26.5411 6.19396 25.7781 4.69658C25.107 3.37944 24.0361 2.30858 22.719 1.63747C21.2216 0.874512 19.2614 0.874512 15.3411 0.874512H12.0744C8.15402 0.874512 6.19384 0.874512 4.69646 1.63747C3.37932 2.30858 2.30846 3.37944 1.63734 4.69658ZM16.1109 7.87538C17.2208 8.06704 18.2823 8.40169 19.2723 8.8559C19.2808 8.85959 19.2882 8.86576 19.2924 8.87438C21.0464 11.4542 21.9126 14.3643 21.5888 17.7145C21.5875 17.7287 21.5802 17.7416 21.5686 17.7502C20.2401 18.7258 18.9533 19.3181 17.6842 19.7106C17.664 19.7168 17.642 19.7094 17.6297 19.6922C17.3365 19.2842 17.0702 18.854 16.837 18.4023C16.8235 18.3758 16.8357 18.3437 16.8633 18.3332C17.2863 18.1736 17.6885 17.9826 18.0754 17.7564C18.106 17.7385 18.1079 17.6948 18.0797 17.6738C17.9977 17.6128 17.9163 17.5487 17.8385 17.4846C17.8238 17.4729 17.8042 17.4704 17.7877 17.4784C15.2759 18.6389 12.5241 18.6389 9.98231 17.4784C9.96577 17.471 9.94617 17.4735 9.93211 17.4852C9.85437 17.5493 9.77292 17.6128 9.69151 17.6738C9.66335 17.6948 9.6658 17.7385 9.69641 17.7564C10.0833 17.9783 10.4855 18.1736 10.9079 18.3339C10.9355 18.3443 10.9483 18.3758 10.9349 18.4023C10.7065 18.8546 10.4402 19.2848 10.1415 19.6928C10.1286 19.7094 10.1072 19.7168 10.087 19.7106C8.82405 19.3181 7.53723 18.7258 6.20878 17.7502C6.19776 17.7416 6.1898 17.728 6.18858 17.7139C5.91799 14.8161 6.46957 11.8819 8.48307 8.87377C8.48794 8.86576 8.49529 8.85959 8.50387 8.8559C9.49439 8.40107 10.5559 8.06643 11.6652 7.87538C11.6854 7.87229 11.7056 7.88154 11.716 7.89941C11.8532 8.14223 12.0099 8.45346 12.1158 8.70798C13.2851 8.52926 14.4727 8.52926 15.6665 8.70798C15.7724 8.459 15.9236 8.14223 16.0601 7.89941C16.0705 7.88092 16.0907 7.87168 16.1109 7.87538ZM9.91863 14.384C9.91863 15.2469 10.5492 15.9494 11.3144 15.9494C12.0919 15.9494 12.7102 15.2469 12.7102 14.384C12.7225 13.5274 12.098 12.8187 11.3144 12.8187C10.537 12.8187 9.91863 13.5212 9.91863 14.384ZM15.0794 14.384C15.0794 15.2469 15.7099 15.9494 16.4752 15.9494C17.2588 15.9494 17.871 15.2469 17.871 14.384C17.8832 13.5274 17.2588 12.8187 16.4752 12.8187C15.6977 12.8187 15.0794 13.5212 15.0794 14.384Z" fill="currentColor"></path></svg>
+              </span>
             </div>
             <div className="flex flex-col">
               <span>Follow us on</span>
-              <span>X / Twitter</span>
+              <span className='font-semibold text-lg'>Buy Coffee</span>
             </div>
           </a>
         </div>
 
         {/* Footer Copyright */}
+        <div>
         <p className="mt-6 text-gray-400 text-sm">
           Copyright 2024 Postable
         </p>
+        </div>
+        
       </div>
     </footer>
   )

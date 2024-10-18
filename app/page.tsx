@@ -1,5 +1,7 @@
 import Hero from "./Components/page/ Hero";
+import Engaging from "./Components/page/Engaging";
 import Faq from "./Components/page/Faq";
+import Features from "./Components/page/Features";
 import Footer from "./Components/page/Footer";
 import OneClickToCreate from "./Components/page/OneClickToCreate";
 import SearchBar from "./Components/page/SearchBar";
@@ -17,7 +19,9 @@ export default function Home() {
       <SocialMedia/>
       <WorkingProcess/>
       <SocialOptimization/>
+      <Features/>
       <Solution/>
+      <Engaging/>
       <Faq/>
       <OneClickToCreate/>
       <Footer/>
