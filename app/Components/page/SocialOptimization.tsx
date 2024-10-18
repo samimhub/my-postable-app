@@ -7,7 +7,7 @@ import { Button } from "../ui/button"
 function SocialOptimization() {
     return (
         <section>
-            <div className="max-w-5xl mx-auto space-y-4">
+            <div className="max-w-5xl mx-auto space-y-10">
                 <h1 className="text-5xl font-bold">Optimized for all social media</h1>
                 <div className="flex justify-start items-start gap-6">
                     <p className="max-w-sm">We've meticulously designed each template to meet the specific guidelines and format requirements of all social media platforms.

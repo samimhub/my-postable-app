@@ -1,5 +1,4 @@
 "use client"
-import { useRouter } from "next/navigation"
 import {
   Accordion,
   AccordionContent,
@@ -12,7 +11,7 @@ import { faqItems } from "@/app/Data/constant"
 
 
 export default function FAQ() {
-  const router = useRouter()
+
 
   const handleAskQuestion = () => {
     // Replace this URL with your actual Google Form URL
@@ -20,8 +19,8 @@ export default function FAQ() {
     window.open(googleFormUrl, '_blank')
   }
   return (
-    <div className="w-full max-w-3xl mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-2">FAQ</h1>
+    <div className="w-full max-w-3xl mx-auto space-y-6 p-6">
+      <h1 className="text-4xl font-bold ">FAQ</h1>
       <p className="text-xl mb-6">
         Let's help you with some of your frequently asked questions.
       </p>
@@ -31,7 +30,7 @@ export default function FAQ() {
         className="p-0 h-auto font-normal">
           Ask a Question →
         </Button>
-      <Accordion type="single" collapsible className="w-full">
+      <Accordion type="single" collapsible className="w-full space-y-4">
         {faqItems.map((item, index) => (
           <AccordionItem key={index} value={`item-${index}`}>
             <AccordionTrigger>{item.question}</AccordionTrigger>

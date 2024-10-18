@@ -6,7 +6,7 @@ import Image from "next/image"
 function WorkingProcess() {
   return (
     <section className="py-10">
-      <div className="max-w-5xl m-auto">
+      <div className="max-w-5xl m-auto space-y-10">
       <h1 className="text-5xl font-bold py-4">How it work?</h1>
       <div className="grid gap-6 md:grid-cols-3 ">
         {processCard.map((card) => (

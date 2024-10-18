@@ -2,7 +2,7 @@ import { Button } from "../ui/button";
 
 export default function OneClickCreate() {
   return (
-    <section className="bg-black min-h-screen text-white py-20 rounded-[45px]">
+    <section className="bg-black min-h-screen space-y-10 text-white py-20 rounded-[45px]">
       <div className="max-w-6xl mx-auto p-6 space-y-10 text-center">
         {/* Heading */}
         <h1 className="text-7xl font-bold">One-Click to Create</h1>
