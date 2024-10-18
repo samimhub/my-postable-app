@@ -1,17 +1,17 @@
-import React, { useState, ReactNode } from "react"
-import { cn } from "@/app/lib/utils"
+import React, { useState, ReactNode, ReactElement } from "react";
+import { cn } from "@/app/lib/utils";
 
 interface AccordionProps {
-  children: ReactNode;
-  type?: "single" | "multiple";
+  children: ReactElement<AccordionItemProps>[]; // Expecting an array of AccordionItems
+  type?: "single" | "multiple"; // Not used, can be removed if not needed
   collapsible?: boolean;
   className?: string;
 }
 
 interface AccordionItemProps {
-  value: string;
+  value: string; // This should be used, can remove if not needed
   collapsible?: boolean;
-  children: ReactNode;
+  children: ReactNode; // Can include any ReactNode, but we will check types inside AccordionItem
 }
 
 interface AccordionTriggerProps {
@@ -26,41 +26,47 @@ interface AccordionContentProps {
 
 export function Accordion({
   children,
-  type = "multiple",
   collapsible = false,
   className = "",
 }: AccordionProps) {
   return (
     <div className={cn("accordion", className)}>
-      {React.Children.map(children, (child: any) =>
-        React.cloneElement(child, { collapsible }) // Pass collapsible prop to AccordionItem
+      {React.Children.map(children, (child) => 
+        React.cloneElement(child as React.ReactElement<AccordionItemProps>, { collapsible }) // Explicitly passing collapsible
       )}
     </div>
-  )
+  );
 }
 
-export function AccordionItem({ value, collapsible = false, children }: AccordionItemProps) {
-  const [isOpen, setIsOpen] = useState(false)
+export function AccordionItem({
+  value, // This can be used to identify or log the item if needed
+  collapsible = false,
+  children,
+}: AccordionItemProps) {
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleItem = () => {
     if (collapsible || !isOpen) {
-      setIsOpen(!isOpen)
+      setIsOpen(!isOpen);
     }
-  }
+  };
 
   return (
     <div className="border-b border-gray-200">
-      {React.Children.map(children, (child: any) => {
-        if (child.type === AccordionTrigger) {
-          return React.cloneElement(child, { onClick: toggleItem, isOpen }) // Pass isOpen state here
+      {React.Children.map(children, (child) => {
+        if (React.isValidElement(child) && child.type === AccordionTrigger) {
+          return React.cloneElement(child as React.ReactElement<AccordionTriggerProps>, {
+            onClick: toggleItem,
+            isOpen,
+          });
         }
-        if (child.type === AccordionContent) {
-          return isOpen && child
+        if (React.isValidElement(child) && child.type === AccordionContent) {
+          return isOpen ? child : null; // Only render if isOpen
         }
-        return child
+        return child; // Return any other children
       })}
     </div>
-  )
+  );
 }
 
 export function AccordionTrigger({
@@ -76,9 +82,9 @@ export function AccordionTrigger({
       <span>{children}</span>
       <span>{isOpen ? "-" : "+"}</span> {/* Show "-" if open, "+" if closed */}
     </button>
-  )
+  );
 }
 
 export function AccordionContent({ children }: AccordionContentProps) {
-  return <div className="p-4 text-gray-600">{children}</div>
+  return <div className="p-4 text-gray-600">{children}</div>;
 }
