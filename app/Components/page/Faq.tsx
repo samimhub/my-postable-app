@@ -1,6 +1,5 @@
 "use client"
 import { Button } from "../ui/button"
-import { faqItems } from "@/app/Data/constant"
 
 
 
@@ -63,10 +62,10 @@ export default function FAQ() {
               aria-labelledby="basic-heading-one-with-arrow-always-open"
             >
               <p className="text-base font-normal text-gray-600 ">
-                To create an account, find the 'Sign up' or 'Create
-                account' button, fill out the registration form with your
-                personal information, and click 'Create account' or 'Sign
-                up.' Verify your email address if needed, and then log in
+                To create an account, find the Sign up or Create
+                account button, fill out the registration form with your
+                personal information, and click Create account or Sign
+                up. Verify your email address if needed, and then log in
                 to start using the platform.
               </p>
             </div>
