@@ -1,7 +1,5 @@
 'use client'
 
-import Image from "next/image"
-
 function BusinessesSolution() {
   return (
     <section className="max-w-sm mx-auto space-y-4">
