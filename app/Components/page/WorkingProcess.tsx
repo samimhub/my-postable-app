@@ -10,7 +10,7 @@ function WorkingProcess() {
       <h1 className="text-5xl font-bold py-4">How it work?</h1>
       <div className="grid gap-6 md:grid-cols-3 ">
         {processCard.map((card) => (
-          <div key={card.id} className="rounded-xl bg-slate-200">
+          <div key={card.id} className="rounded-xl hover:animate-shake bg-slate-200">
             <div className=" w-full p-1">
               <Image src={card.img} alt="card image" width={250} height={120}/>
             </div>

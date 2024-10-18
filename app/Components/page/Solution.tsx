@@ -6,6 +6,7 @@ import IndividualsSolution from './IndividualsSolution';
 import InfluencersSolution from './InfluencersSolution';
 import BusinessesSolution from './BusinessesSolution';
 import Image from 'next/image';
+import { ArrowRight } from 'lucide-react';
 
 
 // Dummy components for example
@@ -50,6 +51,7 @@ const Solution = () => {
       </div>
       <div className='flex justify-center items-center'>
     <Button className='bg-black text-white p-4 text-center text-lg rounded-3xl-sm w-[180px]'>Get Started for Free</Button>
+    <ArrowRight/>
     </div>
     </div>
     <div className=''>
@@ -68,7 +70,7 @@ const Solution = () => {
       {
         activeComponent === 3 &&
          <Image
-        className='h-auto w-full max-w-sm object-contain drop-shadow-xl'
+        className='h-auto w-full max-w-sm object-contain drop-shadow-xl scale-95'
         src={"https://res.cloudinary.com/dzv61qpeu/image/upload/v1727061158/Businesses_tc1bbp.webp"} alt='Post_Image' width={450} height={450}/>
       }
         </div>

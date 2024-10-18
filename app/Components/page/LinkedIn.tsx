@@ -1,11 +1,14 @@
 
 import { Linkedin } from "lucide-react"
+import {motion} from 'framer-motion'
 
 export default function LinkedIn() {
   return (
     <div className="w-full max-w-xl mx-auto p-1 relative">
       {/* First card */}
-      <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-pink-400 via-blue-500 to-teal-400 shadow-lg absolute inset-0 rotate-3 opacity-75">
+      <motion.div 
+      animate={{rotate:[ -15, 4]}}
+      className="overflow-hidden rounded-3xl bg-gradient-to-br from-pink-400 via-blue-500 to-teal-400 shadow-lg absolute inset-0 rotate-3 opacity-75">
         <div className="bg-white/10 backdrop-blur-sm border-1 border-b rounded-t-2xl px-6 py-3 flex items-center space-x-2">
           <Linkedin className="w-4 h-4 text-white" />
           <span className="text-xs font-medium text-white">LinkedIn post</span>
@@ -31,10 +34,12 @@ export default function LinkedIn() {
             <p className="text-xs text-gray-500">9:12 PM · Jul 22, 2024</p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Second card */}
-      <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-pink-400 via-blue-500 to-teal-400 shadow-lg relative z-10">
+      <motion.div 
+      animate={{rotate:[ 15, 0] }}
+      className="overflow-hidden rounded-3xl bg-gradient-to-br from-pink-400 via-blue-500 to-teal-400 shadow-lg relative z-10">
         <div className="bg-white/10 backdrop-blur-sm rounded-t-2xl px-6 py-3 flex items-center space-x-2">
           <Linkedin className="w-4 h-4 text-white" />
           <span className="text-xs font-medium text-white">LinkedIn post</span>
@@ -60,7 +65,7 @@ export default function LinkedIn() {
             <p className="text-xs text-gray-500">9:12 PM · Jul 22, 2024</p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

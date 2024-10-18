@@ -5,6 +5,7 @@ import Facebook from "./Facebook";
 import LinkedIn from "./LinkedIn";
 import Instagram from "./Instagram";
 import { FacebookIcon, InstagramIcon } from "lucide-react";
+import {AnimatePresence, motion} from 'framer-motion'
 
 
 export default function ShareVoice() {
@@ -14,7 +15,13 @@ export default function ShareVoice() {
     setActiveComponent(component);
   };
   return (
-    <section className="relative max-w-screen-lg mx-auto bg-top flex flex-col items-center justify-center sm:mb-16 sm:rounded-[32px] md:mb-24  md:px-12 lg:px-24 lg:pt-12">
+    <motion.section 
+    animate={{
+      x:20,
+      y:20,
+      scale:1
+    }}
+    className="relative max-w-screen-lg  mx-auto bg-top flex flex-col items-center justify-center sm:mb-16 sm:rounded-[32px] md:mb-24  md:px-12 lg:px-24 lg:pt-12">
         <header className=" px-4 w-full bg-gradient-to-br from-pink-400 via-blue-500 to-teal-400 text-white pt-8 space-y-8 rounded-[16px] md:rounded-[64px] shadow-xl">
             <h2 className="font-semibold mx-auto text-balance text-center text-2xl leading-[28px] text-white sm:max-w-md sm:text-3xl sm:leading-[36px] md:max-w-2xl md:text-5xl md:leading-[48px] lg:text-6xl lg:leading-[54px]"
             >
@@ -25,14 +32,17 @@ export default function ShareVoice() {
               perfect for Instagram, Facebook, and more.
             </p>
             
-            <div className="flex justify-center items-center gap-4">
-        <Button 
+            <div
+            className="flex justify-center items-center gap-4">
+              <div>
+              <Button 
           className={`px-4 gap-1 py-1 text-md font-semibold cursor-pointer rounded-xl ${activeComponent === 1 ? 'bg-black/30 hover:scale-105 active:scale-95"' : 'hover:scale-105 hover:duration-300'}`}
           onClick={() => handleToggle(1)}
         >
         <FacebookIcon size={12}/>
           Facebook Story
         </Button>
+              </div>
         <Button 
           className={`px-4 gap-1 py-1 text-md font-semibold cursor-pointer rounded-xl ${activeComponent === 2 ? 'bg-black/30 hover:scale-105 active:scale-95' : 'hover:scale-105 hover:duration-300'}`}
           onClick={() => handleToggle(2)}
@@ -57,8 +67,10 @@ export default function ShareVoice() {
         <Button>+ more</Button>
       </div>
       <div className="relative w-full flex justify-center mt-8">
+        <AnimatePresence>
         {activeComponent === 1 && 
-        <div className="relative -bottom-16 md:w-3/4 md:p-4 rounded-2xl">
+        <div 
+        className="relative -bottom-16 md:w-3/4 md:p-4 rounded-2xl">
             <Facebook/>
         </div>
         
@@ -69,17 +81,20 @@ export default function ShareVoice() {
         </div> 
         }
         {activeComponent === 3 && 
-        <div className="relative -bottom-16 md:w-3/4 md:p-4 rounded-2xl">
+        <div 
+        className="relative -bottom-16 md:w-3/4 md:p-4 rounded-2xl">
           <LinkedIn/>
         </div>
         }
         {activeComponent === 4 && 
-        <div className="relative -bottom-16 md:w-3/4 md:p-4 rounded-2xl">
+        <div 
+        className="relative -bottom-16 md:w-3/4 md:p-4 rounded-2xl">
           <Instagram/>
         </div>
         }
+          </AnimatePresence>
       </div>
           </header>
-    </section>
+    </motion.section>
   )
 }
