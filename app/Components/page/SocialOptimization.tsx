@@ -11,7 +11,7 @@ function SocialOptimization() {
             <div className="max-w-5xl mx-auto space-y-10">
                 <h1 className="text-5xl font-bold">Optimized for all social media</h1>
                 <div className="flex justify-start items-start gap-6">
-                    <p className="max-w-sm">We've meticulously designed each template to meet the specific guidelines and format requirements of all social media platforms.
+                    <p className="max-w-sm">We&apos;ve meticulously designed each template to meet the specific guidelines and format requirements of all social media platforms.
                         By preserving safe zones and adhering to platform standards, we ensure that your posts will always be visually striking, no matter where you share them.</p>
                     <div className="space-x-4">
                         <ul className="space-y-4">

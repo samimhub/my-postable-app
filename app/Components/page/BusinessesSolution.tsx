@@ -5,7 +5,7 @@ function BusinessesSolution() {
     <section className="max-w-sm mx-auto space-y-4">
     <div className="flex flex-col  ">
       <p className="" >Postable is perfect for individuals who want to elevate their social media presence without the hassle. 
-          Whether you're sharing thoughts, opinions, or everyday moments, Postable makes it easy to create and share beautiful, impactful posts from your tweets.</p>
+          Whether you&apos;re sharing thoughts, opinions, or everyday moments, Postable makes it easy to create and share beautiful, impactful posts from your tweets.</p>
       </div>
       <div>
       <ul className="space-y-2">

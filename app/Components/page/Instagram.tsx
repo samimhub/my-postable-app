@@ -1,6 +1,6 @@
 "use client"
 
-import { FacebookIcon, InstagramIcon } from "lucide-react"
+import { InstagramIcon } from "lucide-react"
 import {motion} from 'framer-motion'
 
 

@@ -22,7 +22,7 @@ export default function FAQ() {
     <div className="w-full max-w-3xl mx-auto space-y-6 p-6">
       <h1 className="text-4xl font-bold ">FAQ</h1>
       <p className="text-xl mb-6">
-        Let's help you with some of your frequently asked questions.
+        Let&apos;s help you with some of your frequently asked questions.
       </p>
         <Button 
         variant="link"
