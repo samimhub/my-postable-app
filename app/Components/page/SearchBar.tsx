@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
-import {Clipboard, ClipboardList, MessageCircle} from'lucide-react'
+import {ClipboardList, MessageCircle} from'lucide-react'
 
 
 export default function SearchBar() {
