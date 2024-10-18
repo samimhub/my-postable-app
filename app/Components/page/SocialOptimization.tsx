@@ -2,6 +2,7 @@
 
 import { ArrowRight } from "lucide-react"
 import { Button } from "../ui/button"
+import Image from "next/image"
 
 
 function SocialOptimization() {
@@ -34,7 +35,7 @@ function SocialOptimization() {
                                 </svg><span className="text-lg font-medium tracking-[-0.5px] text-white md:text-[32px] md:leading-[150%]">LinkedIn Post</span>
                             </h4>
                             <div className="relative aspect-square w-64 overflow-hidden md:w-[500px]">
-                                <img src="https://res.cloudinary.com/dzv61qpeu/image/upload/v1726028193/textures-1_tcu61i.webp" alt="LinkedIn Post" className="size-full object-cover object-left-top" />
+                                <Image src="https://res.cloudinary.com/dzv61qpeu/image/upload/v1726028193/textures-1_tcu61i.webp" width={200} height={400} alt="LinkedIn Post" className="size-full object-cover object-left-top" />
                             </div>
                         </div>
                         <div className="flex flex-col opacity-100 -translate-x-16 translate-y-20 rotate-3 will-change-auto">
@@ -45,7 +46,7 @@ function SocialOptimization() {
                                 <span className="text-lg font-medium tracking-[-0.5px] text-white md:text-[32px] md:leading-[150%]">Instagram Story</span>
                             </h4>
                             <div className="relative aspect-square w-64 overflow-hidden md:w-[500px]">
-                                <img src="https://res.cloudinary.com/dzv61qpeu/image/upload/v1726028193/textures-1_tcu61i.webp" alt="Instagram Story" className="size-full object-cover" />
+                                <Image src="https://res.cloudinary.com/dzv61qpeu/image/upload/v1726028193/textures-1_tcu61i.webp" width={200} height={400} alt="Instagram Story" className="size-full object-cover" />
                             </div>
                         </div>
                         <div className="flex flex-col opacity-100 -translate-x-24 rotate-3 will-change-auto" >
@@ -55,7 +56,7 @@ function SocialOptimization() {
                                 <span className="text-lg font-medium tracking-[-0.5px] text-white md:text-[32px] md:leading-[150%]">Facebook Post</span>
                             </h4>
                             <div className="relative aspect-square w-64 overflow-hidden md:w-[500px]">
-                                <img src="https://res.cloudinary.com/dzv61qpeu/image/upload/v1726028193/textures-4_cgvesv.webp" alt="Facebook Post" className="size-full object-cover rotate-90 object-left-top -scale-y-100" />
+                                <Image src="https://res.cloudinary.com/dzv61qpeu/image/upload/v1726028193/textures-4_cgvesv.webp" width={200} height={400} alt="Facebook Post" className="size-full object-cover rotate-90 object-left-top -scale-y-100" />
                             </div></div><div className="flex flex-col opacity-100 -translate-x-24 rotate-3 will-change-auto" >
                             <h4 className="flex items-center gap-2 rounded-t-3xl px-4 py-4 text-lg font-medium md:rounded-t-[50px] md:px-12 md:py-8 bg-[#E7C694]">
                                 <svg className="size-4 text-white md:size-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,7 +64,7 @@ function SocialOptimization() {
                                 <span className="text-lg font-medium tracking-[-0.5px] text-white md:text-[32px] md:leading-[150%]">Instagram Post</span>
                             </h4>
                             <div className="relative aspect-square w-64 overflow-hidden md:w-[500px]">
-                                <img src="https://res.cloudinary.com/dzv61qpeu/image/upload/v1726028193/textures-4_cgvesv.webp" alt="Instagram Post" className="size-full object-cover -scale-x-100 -scale-y-100" />
+                                <Image src="https://res.cloudinary.com/dzv61qpeu/image/upload/v1726028193/textures-4_cgvesv.webp" width={200} height={400} alt="Instagram Post" className="size-full object-cover -scale-x-100 -scale-y-100" />
                             </div>
                         </div>
                     </div>

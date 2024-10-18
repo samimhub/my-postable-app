@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "../ui/button";
 
 export default function OneClickCreate() {
@@ -26,9 +27,8 @@ export default function OneClickCreate() {
         {/* Image Section (Empty Placeholder) */}
         <div className="">
           <div className="relative mx-auto w-full max-w-7xl max-h-screen -bottom-10">
-            <img 
-            className=""
-            src="https://res.cloudinary.com/dzv61qpeu/image/upload/v1727020129/app-screenshot_uficxp.webp" alt="backImage" />
+            <Image 
+            src="https://res.cloudinary.com/dzv61qpeu/image/upload/v1727020129/app-screenshot_uficxp.webp" width={960} height={480} alt="backImage" />
           </div>
         </div>
       </div>
